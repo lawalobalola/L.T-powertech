@@ -178,15 +178,14 @@ img {
 }
 
 
-.navbar {
+nav ul{
 
     display: flex;
-
-    gap: 30px;
+    list-style: none;
 }
 
 
-.navbar a {
+nav ul li{
 
     font-size: 14px;
 
@@ -198,12 +197,18 @@ img {
 }
 
 
-.navbar a:hover {
+nav ul li a  {
+color: black;
+margin-left: 10px;
+text-decoration: none;
+font-weight: bold;
+padding: 5px 0;
+transition: color 0.3s;
 
-    color: var(--green);
 }
-
-
+nav ul li a:hover {
+        color: var(--green);
+}
 .header-button {
 
     background: var(--black);
@@ -1247,12 +1252,18 @@ img {
 ========================= */
 
 @media (max-width: 900px) {
-
-    .navbar {
-
-        display: none;
-    }
-
+ .header-content{
+    flex-direction: column;
+    gap: 20px;
+ }
+ nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+ }
+ nav ul li {
+    margin-left: 0;
+ }
 
     .hero-grid,
     .about-grid,
@@ -1298,13 +1309,19 @@ img {
 
 
 @media (max-width: 600px) {
-
+    .header {
+        padding: 15px;
+    }
     .header-button {
-
         display: none;
     }
-
-
+    nav ul {
+        gap: 8px;
+    }
+    nav ul li a {
+        font-size: 12px;
+        margin-left: 5px;
+    }
     .section {
 
         padding: 70px 0;
